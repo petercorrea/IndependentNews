@@ -1,0 +1,424 @@
+html {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  position: relative;
+  font-family: Helvetica, sans-serif;
+}
+
+body {
+  background-color: white;
+  width: 100vw;
+  padding: 0px;
+  margin: 0 auto;
+}
+
+.read-more-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  display: block;
+  margin-bottom: 20px;
+}
+
+header,
+footer {
+  background-color: white;
+  width: auto;
+  padding: 10px;
+}
+
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.95;
+}
+header .header-logo {
+  width: 25px;
+  height: 25px;
+}
+header ul {
+  margin: 0px;
+  padding: 0px;
+  right: 0px;
+  text-align: right;
+}
+header ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+header ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  height: auto;
+  position: relative;
+  bottom: 0px;
+  border-top: 1px solid lightgray;
+}
+footer .footer-logo {
+  width: 100px;
+  height: 100px;
+}
+footer .footer-link-sections {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+footer .footer-link-sections .footer-link-section h3 {
+  margin: 10px 0px;
+}
+footer .footer-link-sections .footer-link-section .footer-link-lists {
+  list-style: none;
+  flex-basis: 50%;
+  padding: 0px;
+}
+footer .footer-link-sections .footer-link-section .footer-link-lists li {
+  font-size: 0.8rem;
+  margin: 10px 0px;
+}
+footer .footer-link-sections .footer-link-section .footer-link-lists li a {
+  text-decoration: none;
+  color: gray;
+}
+
+.movie {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  pointer-events: none;
+}
+
+.hero {
+  height: 100vh;
+  left: 0px;
+  right: 0px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.hero h1 {
+  font-size: 4rem;
+  font-weight: bolder;
+  color: white;
+  display: inline-block;
+  position: absolute;
+  z-index: 99;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 0 0 200px rgba(90, 90, 90, 0.3);
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.secondary-page {
+  margin-top: 50px;
+}
+
+.selected-page {
+  text-decoration: underline;
+}
+
+.top-news {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.top-news h2 {
+  display: block;
+}
+.top-news h3 {
+  font-size: 1.5rem;
+}
+
+.section-2 h3 {
+  display: block;
+  width: auto;
+  margin-bottom: 0px;
+  border-bottom: 1px lightgray solid;
+}
+.section-2 ul {
+  margin: 0 auto;
+  padding: 0px;
+}
+.section-2 ul li {
+  list-style: none;
+  margin: 0 auto;
+}
+.section-2 ul li h3 {
+  margin: 0 auto;
+  font-size: 1.8rem;
+  border: none;
+}
+.section-2 ul li h4 {
+  margin: 0 auto;
+  font-size: 1rem;
+  margin-top: 50px;
+  font-weight: lighter;
+}
+.section-2 ul li p {
+  margin: 0 auto;
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.section-2 li:first-child > h4 {
+  margin-top: 10px;
+}
+
+.subscribe {
+  width: auto;
+  margin: 30px 20px;
+  padding: 40px 20px;
+  border-bottom: 1px lightgray solid;
+}
+.subscribe img {
+  width: 100%;
+}
+.subscribe h2 {
+  display: block;
+  text-align: center;
+}
+.subscribe form {
+  position: relative;
+}
+.subscribe form div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 50px;
+  border-radius: 25px;
+}
+.subscribe form div input {
+  height: 50px;
+  width: 80vw;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  border: none;
+  border-bottom: 2px gray solid;
+  text-align: left;
+  background-color: gray;
+  border-radius: 25px;
+  padding: 20px;
+  color: white;
+}
+.subscribe form div input::placeholder {
+  text-align: left;
+  color: white;
+}
+.subscribe form div button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 8px;
+  right: 20px;
+}
+.subscribe form div button img {
+  width: 25px;
+}
+
+.flex-parent {
+  width: auto;
+  height: auto;
+  background-color: white;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.flex-parent .flex-child {
+  margin: 10px 20px;
+  border-bottom: 1px solid lightgray;
+}
+.flex-parent .flex-child h3,
+.flex-parent .flex-child h4 {
+  margin: 0;
+}
+.flex-parent .flex-child h4 {
+  font-size: 0.7rem;
+  font-weight: lighter;
+  color: gray;
+}
+.flex-parent .flex-child p {
+  font-size: 0.95rem;
+  font-weight: lighter;
+  line-height: 1.5rem;
+}
+.flex-parent .flex-child a {
+  text-decoration: none;
+  color: black;
+}
+.flex-parent .flex-child .article-headshot-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.flex-parent .flex-child .article-headshot-container .article-headshot {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50px;
+  border: 1px lightgray solid;
+  margin-right: 20px;
+}
+.flex-parent .flex-child .article-cover {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin: 5px auto;
+}
+
+.left-sidebar {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  column-gap: 50px;
+  row-gap: 30px;
+  grid-template-rows: auto;
+  padding: 20px;
+}
+.left-sidebar .secondary-article-item .img-holder {
+  width: 200px;
+  height: 100px;
+  object-fit: cover;
+  background-color: gray;
+  margin: 0 auto;
+}
+.left-sidebar .secondary-article-item .secondary-article-text h4 {
+  margin: 0 auto;
+  color: gray;
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+.left-sidebar .secondary-article-item .secondary-article-text h3 {
+  margin: 0 auto;
+  width: auto;
+  display: inline-block;
+}
+.left-sidebar .secondary-article-item .secondary-article-text h3 a {
+  text-decoration: none;
+  color: black;
+}
+
+.right-sidebar {
+  display: none;
+}
+
+@media only screen and (min-width: 700px) {
+  body {
+    width: 100vw;
+  }
+
+  .hero {
+    width: 100vw;
+  }
+
+  .width-700 {
+    width: 100vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-rows: auto;
+    grid-template-areas: "left-sidebar top-news right-sidebar";
+    padding-top: 20px;
+  }
+  .width-700 .top-news {
+    grid-area: top-news;
+  }
+  .width-700 .top-news .flex-parent {
+    margin-left: 0px;
+    max-width: 600px;
+  }
+  .width-700 .top-news .flex-child:last-child {
+    border: none;
+  }
+  .width-700 .left-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    height: auto;
+  }
+  .width-700 .right-sidebar {
+    display: block;
+  }
+  .width-700 .right-sidebar .article-headshot {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50px;
+    border: 1px lightgray solid;
+    margin-right: 20px;
+  }
+  .width-700 .right-sidebar .correspondent-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .width-700 .right-sidebar .correspondent-container h4,
+.width-700 .right-sidebar .correspondent-container p {
+    margin: 0 auto;
+    font-size: 0.8rem;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 10px;
+    border-top: 1px lightgray solid;
+    align-items: center;
+  }
+  footer img {
+    margin-right: 50px;
+  }
+  footer .footer-link-sections {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer-link-sections h3 {
+    margin: 0px;
+  }
+  footer .footer-link-sections .footer-link-section {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer-link-sections .footer-link-section .footer-link-lists {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px;
+  }
+  footer .footer-link-sections .footer-link-section .footer-link-lists li {
+    margin: 0px;
+    margin-right: 10px;
+  }
+}
+
+/*# sourceMappingURL=styler.css.map */
